@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>ack</Name>
+    <Packager>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Packager>
+    <License>GPLv2</License>
+    <PartOf>programming</PartOf>
+    <IsA>app:console</IsA>
+      <Summary>A grep-like tool for programmers</Summary>
+      <Description>ack is a tool like grep, aimed at programmers with large trees of heterogeneous source code.</Description>
+      <Archive sha1sum="5e01f79e93a94d7cdbe1a20d4fd73ea840e8bd4c" type="binary">http://ack.googlecode.com/svn/tags/1.88/ack</Archive>
+  </Source>
+
+  <Package>
+    <Name>ack</Name>
+    <RuntimeDependencies>
+      <Dependency>perl</Dependency>
+    </RuntimeDependencies>
+    <Files>
+      <Path fileType="executable">/usr/bin/ack</Path>
+    </Files>
+  </Package>
+
+  <History>
+    <Update release="1">
+      <Date>2009-20-05</Date>
+      <Version>1.88</Version>
+      <Comment>first release</Comment>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Update>
+  </History>
+</PISI>
