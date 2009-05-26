@@ -1,0 +1,12 @@
+diff -ur xml-light.orig/Makefile xml-light/Makefile
+--- xml-light.orig/Makefile	2009-05-26 14:07:27.000000000 +0200
++++ xml-light/Makefile	2009-05-26 14:17:47.000000000 +0200
+@@ -44,6 +44,8 @@
+ 
+ dtd.cmi: xml.cmi
+ 
++xml_parser.cmi: xml_parser.mli
++
+ xml.cmi: 
+ 
+ xmlParser.cmi: dtd.cmi xml.cmi

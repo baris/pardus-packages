@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>xml-light</Name>
+    <Packager>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Packager>
+    <License>GPLv2</License>
+    <PartOf>programming</PartOf>
+    <IsA>app:console</IsA>
+    <Summary>Ocaml xml library</Summary>
+    <Description>...</Description>
+    <Archive sha1sum="e524aa20c34bf45a839363b61bb2cbbf8fcdc6bc" type="zip">http://tech.motion-twin.com/zip/xml-light-2.2.zip</Archive>
+    <Patches>
+      <Patch level="1">build.patch</Patch>
+    </Patches>
+  </Source>
+
+  <Package>
+    <Name>xml-light</Name>
+    <RuntimeDependencies>
+      <Dependency>ocaml</Dependency>
+    </RuntimeDependencies>
+    <Files>
+      <Path fileType="executable">/</Path>
+    </Files>
+    <AdditionalFiles>
+      <AdditionalFile target="/usr/lib/ocaml/site-lib/xml-light/META" permission="0644">META</AdditionalFile>
+    </AdditionalFiles>
+  </Package>
+
+  <History>
+    <Update release="1">
+      <Date>2009-26-05</Date>
+      <Version>2.2</Version>
+      <Comment>first release</Comment>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Update>
+  </History>
+</PISI>
