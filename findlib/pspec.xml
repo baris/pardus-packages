@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>findlib</Name>
+    <Packager>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Packager>
+    <License>GPLv2</License>
+    <PartOf>programming</PartOf>
+    <IsA>app:console</IsA>
+    <Summary>Find Ocaml libraries</Summary>
+    <Description>...</Description>
+    <Archive sha1sum="de73c1c4287263e986b4a4f56b029aadaffc2944" type="targz">http://download.camlcity.org/download/findlib-1.2.4.tar.gz</Archive>
+  </Source>
+
+  <Package>
+    <Name>findlib</Name>
+    <RuntimeDependencies>
+      <Dependency>ocaml</Dependency>
+    </RuntimeDependencies>
+    <Files>
+      <Path fileType="executable">/usr/bin</Path>
+      <Path fileType="config">/etc</Path>
+      <Path fileType="library">/usr/lib</Path>
+      <Path fileType="doc">/usr/share/man</Path>
+    </Files>
+  </Package>
+
+  <History>
+    <Update release="1">
+      <Date>2009-26-05</Date>
+      <Version>1.2.4</Version>
+      <Comment>first release</Comment>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Update>
+  </History>
+</PISI>
