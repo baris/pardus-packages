@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>msttcorefonts</Name>
+        <Homepage>http://corefonts.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Baris Metin</Name>
+            <Email>baris@metin.org</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>data:font</IsA>
+        <PartOf>fonts</PartOf>
+        <Summary>MS core fonts</Summary>
+        <Description>MS core fonts</Description>
+        <Archive sha1sum="e7663eacd1e3271daa7148bc3ee25d40b693ae7f" type="targz">http://thelinuxbox.org/downloads/fonts/msttcorefonts.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>msttcorefonts</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>xorg-font</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/fonts</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2009-05-29</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Baris Metin</Name>
+            <Email>baris@metin.org</Email>
+        </Update>
+    </History>
+</PISI>
