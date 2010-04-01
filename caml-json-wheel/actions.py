@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 
 from pisi.actionsapi import get
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import shelltools
 
+WorkDir="json-wheel-1.0.6"
 
 def setup():
-    autotools.rawConfigure("-disable-gtk -disable-gtk2 -disable-tcl -disable-ssl -disable-apache -without-nethttpd -without-rpc-auth-dh -bindir /usr/bin -datadir /usr/share/ocamlnet")
+    pass
 
 def build():
     autotools.make("-j1 all")
@@ -15,8 +17,10 @@ def build():
 
 def install():
     install_dir = get.installDIR() + "/usr/lib/ocaml/site-lib"
+    usr_dir = get.installDIR() + "/usr"
     shelltools.export("OCAMLFIND_DESTDIR", install_dir)
     shelltools.export("OCAMLFIND_LDCONF", "ignore")
 
     shelltools.makedirs(install_dir)
-    autotools.rawInstall("DESTDIR=%s" % install_dir)
+    shelltools.makedirs(usr_dir+"/bin")
+    autotools.rawInstall("DESTDIR=%s PREFIX=%s" % (install_dir, usr_dir))

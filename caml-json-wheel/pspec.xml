@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+  <Source>
+    <Name>caml-json-wheel</Name>
+    <Packager>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Packager>
+    <License>GPLv2</License>
+    <PartOf>programming</PartOf>
+    <IsA>lib</IsA>
+    <Summary>Ocaml json lib</Summary>
+    <Description>...</Description>
+    <Archive sha1sum="dfbf8fd3875a7b6c8a6c2e498b0572862edc7881" type="targz">http://martin.jambon.free.fr/json-wheel-1.0.6.tar.gz</Archive>
+    <BuildDependencies>
+      <Dependency>ocaml</Dependency>
+      <Dependency>findlib</Dependency>
+      <Dependency>ocamlnet</Dependency>
+    </BuildDependencies>
+  </Source>
+
+  <Package>
+    <Name>caml-json-wheel</Name>
+    <RuntimeDependencies>
+      <Dependency>ocaml</Dependency>
+      <Dependency>findlib</Dependency>
+      <Dependency>ocamlnet</Dependency>
+    </RuntimeDependencies>
+    <Files>
+      <Path fileType="library">/usr/lib/ocaml/site-lib</Path>
+      <Path fileType="executable">/usr/bin</Path>
+    </Files>
+  </Package>
+
+  <History>
+    <Update release="1">
+      <Date>2010-04-01</Date>
+      <Version>1.0.6</Version>
+      <Comment>first release</Comment>
+      <Name>Baris Metin</Name>
+      <Email>baris@pardus.org.tr</Email>
+    </Update>
+  </History>
+</PISI>
